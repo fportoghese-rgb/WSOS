@@ -1,0 +1,22 @@
+<html>
+  <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  
+    <body>
+        <h1>Calciatori</h1>
+
+
+       <ul>
+        <li th:each="c : ${calcioList}">
+            <span th:text="${c.nome}">Nome</span> 
+            <span th:text="${c.cognome}">Cognome</span>
+            <a th:href="@{/show(id=${c.id})}">Dettagli</a>
+            <a th:href="@{/edit(id=${c.id})}">Modifica</a>
+        </li>
+    </ul>
+
+       <form action="/create" method="GET">
+        <button>Inserisci un nuovo Calciatore</button>
+       </form>
+    </body>
+</html>

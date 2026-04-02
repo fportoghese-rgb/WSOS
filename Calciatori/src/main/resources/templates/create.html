@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <h1>Inserisci un Calciatore</h1>
+
+    <form th:action="@{/store}" th:object="${calcio}" method="post">
+        <div>
+            <label>Id:</label>
+            <input type="text" th:field="*{id}" />
+        </div>
+
+        <div>
+            <label>Nome:</label>
+            <input type="text" th:field="*{nome}" />
+        </div>
+
+        <div>
+            <label>Cognome:</label>
+            <input type="text" th:field="*{cognome}" />
+        </div>
+
+        <div>
+            <label>Data Nascita:</label>
+            <input type="text" th:field="*{dataNascita}" />
+        </div>
+
+        <div>
+            <label>Nazionalità:</label>
+            <input type="text" th:field="*{nazionalita}" />
+        </div>
+
+        <button type="submit">Inserisci</button>
+    </form>
+</body>
+</html>

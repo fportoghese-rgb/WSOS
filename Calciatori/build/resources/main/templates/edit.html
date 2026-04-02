@@ -1,0 +1,16 @@
+    <html>
+        <body>
+            <h1>Serie A</h1>
+
+                <form action="/update" method="POST" th:object="${pallone}">
+                    Nome<input type="text" th:field="*{nome}">
+                    Cognome<input type="text" th:field="*{cognome}">
+                    Data Nascita<input type="text" th:field="*{dataNascita}">
+                    Nazionalita<input type="text" th:field="*{nazionalita}">
+
+                    <button>Salva Modifiche</button>
+                    <input type="hidden" th:field="*{id}">
+                </form>
+                
+        </body>
+    </html>

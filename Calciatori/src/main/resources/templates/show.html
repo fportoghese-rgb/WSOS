@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <h2>Dettagli Calciatore</h2>
+
+    <p>ID: <span th:text="${calcio.id}"></span></p>
+    <p>Nome: <span th:text="${calcio.nome}"></span></p>
+    <p>Cognome: <span th:text="${calcio.cognome}"></span></p>
+    <p>Data Nascita: <span th:text="${calcio.dataNascita}"></span></p>
+    <p>Nazionalità: <span th:text="${calcio.nazionalita}"></span></p>
+
+    <form th:action="@{/delete}" method="post">
+        <input type="hidden" th:name="id" th:value="${calcio.id}" />
+        <button type="submit">Rimuovi</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <h2>Dettagli</h2>
+        
+        <p>ID: <span th:text="${pallone.id}"></span></p>
+        <p>Nome: <span th:text="${pallone.nome}"></span></p>
+        <p>Cognome:<span th:text="${pallone.cognome}"></span>
+         <p> Data Nascita:<span th:text="${pallone.data_nascita}"></span></p>
+         <p> Nazionalita:<span th:text="${pallone.nazionalita}"></span></p>
+        <br>
+        
+        <form action="/delete" method="POST">
+            <button>Rimuovi</button>
+            <input type="hidden" name="id" th:value="${pallone.id}"/>
+        </form>
+        
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <h1>Calciatori</h1>
+
+
+      <form th:each="pallone:${Calcio}">
+        Id:<span th:text="${pallone.id}"></span>
+        Nome:<span th:text="${pallone.nome}"></span>
+        <button formaction="/show" method="GET">Dettagli</button>
+        <button formaction="/edit" method="GET">Dettagli</button>
+      </form>
+
+       <form action="/create" method="GET">
+        <button>Inserisci un nuovo Calciatore</button>
+       </form>
+    </body>
+</html>
