@@ -1,0 +1,16 @@
+    <!DOCTYPE html>
+    <html xmlns:th="http://www.thymeleaf.org">
+        
+
+        <form action="/form" method="POST" th:each="student : ${Studenti}">
+        id <span th:text="${student.id}"></span>
+        Nome<span th:text="${student.nomd}"></span>
+        eta<span th:text="${student.eta}"></span>
+
+
+        <input type="submit" name="action" value="Update">
+        <input type="submit" name="action" value="Elimina">
+
+            <input type="hidden" name="id" th:value="${student.id}">
+        </form>
+    </html>
