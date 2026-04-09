@@ -1,0 +1,43 @@
+/*Consegne. Realizzare:
+il codice PHP/Servlet lato server (uno o più script php e una o più servlet, a vostro piacimento) e 
+le pagine HTML che diano accesso alle funzionalità “CRUD” descritte di seguito.
+Richieste (NB: sono R e C in CRUD)
+Realizzare un form HTML con un bottone che, cliccato, consenta di ricevere dal server la lista dei record presenti in tabella.
+Realizzare un form HTML che permetta l’inserimento di un nuovo record nella tabella books, verificando che siano visibili i nuovi inserimenti.
+Facoltative (NB: sono U e D in CRUD)
+Nella lista di record ricevuta dal server come codice HTML con (1), si renda, per ciascun record, l’attributo isbn un link, che, cliccato, porta a un form di aggiornamento (modifica) del record di provenienza.
+Aggiungere, in quest’ultimo form di aggiornamento, un bottone per l’eliminazione del record dalla tabella books.*/
+
+<html>
+    <body> 
+        <h2> BIBLIOTECA PORTOGHESE</h2>
+
+        <form action="Libri.php" method="POST">
+            <label for="id">Id</label>
+            <input type="text" name="id">
+            <label for="isbn">Isbn</label>
+            <input type="text" name="isbn">
+            <label for="title">Title</label>
+            <input type="text" name="title">
+            <label for="author">Author</label>
+            <input type="text" name="author">
+            <label for="publisher">Publisher</label>
+            <input type="text" name="publisher">
+            <label for="ranking">Ranking</label>
+            <input type="text" name="ranking">
+            <label for="year">Year</label>
+            <input type="text" name="year">
+            <label for="price">Price</label>
+            <input type="text" name="price">
+            <button type="submit">Inserisci</button>
+            <input type="hidden" name="action" value="create">
+            <button type="submit" name="action" value="delete">Elimina</button>
+        </form>
+
+
+        <form action="Libri.php" method="GET">
+            <button type="submit">DAMMI TUTTI I RECORDS DI EXAM</button>
+            <input type="hidden" name="action" value="read">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+/*id,name,gift quantity delivered*/
+
+<html>
+    <body>
+        <h2>BABBO NATALE</h2>
+        <form action="BabboNatale.php" method="POST">
+            <label for="id">ID</label>
+            <input type="text" name="id">
+            <label for="name">Name</label>
+            <input type="text" name="name">
+            <label for="gift">Gift</label>
+            <input type="text" name="gift">
+            <label for="quantity">Quantity</label>
+            <input type="text" name="quantity">
+            <label for="delivered">Delivered</label>
+            <input type="text" name="delivered">
+            <button type="submit">Inserisci</button>
+            <input type="hidden" name="action" value="create">
+        </form>
+
+        <form action="BabboNatale.php" method="GET">
+            <button type="submit">Mostra</button>
+            <input type="hidden" name="action" value="read">
+        </form>
+    </body>
+</html>

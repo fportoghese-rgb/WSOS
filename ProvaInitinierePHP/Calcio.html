@@ -1,0 +1,28 @@
+first_name, last_name, team, position, nationality, birth_year
+
+<html>
+    <body>
+        <h2> FANTACACLIO </h2>
+        <form action="Calcio.php" method="POST">
+            <label for="first_name">Nome</label>
+            <input type="text" name="first_name">
+            <label for="last_name">Cognome</label>
+            <input type="text" name="last_name">
+            <label for="team">Squadra</label>
+            <input type="text" name="team">
+            <label for="position">Ruolo</label>
+            <input type="text" name="position">
+            <label for="nationality">Nazionalita</label>
+            <input type="text" name="nationality">
+            <label for="birth_year">Compleanno</label>
+            <input type="text" name="birth_year">
+            <button type="submit">Inserisci</button>
+            <input type="hidden" name="action" value="create">
+        </form>
+
+        <form action="Calcio.php" method="GET">
+            <button type="submit">MOSTRA I CALCIATORI</button>
+            <input type="hidden" name="action" value="read">
+        </form>
+    </body>
+</html>

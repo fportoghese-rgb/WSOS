@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <form action="/Offers.php" method="POST">
+            <label for="Id" >ID</label>
+            <input type="text" name="Id" > <br>
+            <label for="Descrizione" >Descrizione</label>
+            <input type="text" name="Descrizione"><br>
+            <label for="Prezzo" >Prezzo</label>
+            <input type="text" name="Prezzo" ><br>
+            <label for="Validità" >Validità</label>
+            <input type="text" name="Validita" ><br>
+            <label for="Acquistato" >Acquistato</label>
+            <input type="text" name="Acquistato" ><br>
+            <button type="submit"> Aggiungi Offerta</button>
+            <input type="hidden" name="action" value="create">
+        </form>
+        
+        <form action="/Offers.php" method="GET">
+            <button type="submit"> Dammi i record</button>
+            <input type="hidden" name="action" value="read">
+        </form>
+    </body>
+</html>

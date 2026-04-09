@@ -1,0 +1,78 @@
+/*Il proprietario di una fumetteria deve correggere un errore nella tabella del database che usa per aggiornare il magazzino.
+
+Nella tabella 'fumetti', il campo 'autore' riporta il cognome e il nome dell'autore del fumetto inserito in ogni record. Dopo aver aggiunto i campi 'autore_nome' e 'autore_cognome', deve aggiornare i record separando il cognome dal nome, che nel campo 'autore' scritti usando il carattere separatore '-' (dash).
+
+Implementare uno script in PHP che scandisca tutti i record della tabella fumetti e aggiorni i campi, 'autore_nome' e 'autore_cognome'.
+
+Esempio:
+La Saga della Spada di ghiaccio, fantasy, Topolino, Massimo-De Vita, NULL, NULL, 1982-1984
+-> 
+La Saga della Spada di ghiaccio, fantasy, Topolino, Massimo-De Vita, Massimo, De Vita, 1982-1984
+
+
+Suggerimento: la funzione explode() di PHP, divide una stringa in un array basandosi su un separatore specificato.
+esempio:
+//stringa originale con il trattino come separatore
+$string = "Massimo-De Vita";
+
+//uso di explode
+$parts = explode("-", $string);
+
+//$parts è ora un array; $parts[0] contiene la parte antecedente al trattino e $parts[1] quella che lo segue
+print $parts[0];
+print $parts[1];
+
+
+Tabella 'fumetti':
+CREATE TABLE fumetti
+(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titolo VARCHAR(100),
+    genere VARCHAR(50),
+    testata VARCHAR(50),
+    autore VARCHAR(50),
+    autore_nome VARCHAR(25),
+    autore_cognome VARCHAR(25),
+    anni VARCHAR(20)
+);
+
+
+INSERT INTO fumetti (titolo, genere, testata, autore, anni)
+VALUES
+('La Saga della Spada di ghiaccio', 'fantasy', 'Topolino', 'Massimo-De Vita', '1982-1984'),
+('Torment', 'supereroi Marvel comics', 'Spiderman', 'Todd-McFarlane', '1990'),
+('BURTON & CYB', 'fantascienza', 'Comic Art', 'Antonio-Segura Cervera', '1993'),
+('Akira', 'cyberpunk', 'Panini Comics', 'Katsuhiro-Ōtomo', '1982'),
+('L''Eternauta', 'fantascienza', 'Comic Art', 'Héctor-Oesterheld', '1957');*/
+<html>
+    <body>
+        <form action="/Fumetti.php"  method="POST">
+            <label for="id">Id</label>
+            <input type="text" name="id">
+             <label for="titolo">Titolo</label>
+            <input type="text" name="titolo">
+             <label for="genere">Genere</label>
+            <input type="text" name="genere">
+             <label for="testata">Testata</label>
+            <input type="text" name="testata">
+             <label for="autore">Autore</label>
+            <input type="text" name="autore">
+             <label for="autore_nome">Autore_nome</label>
+            <input type="text" name="autore_nome">
+             <label for="autore_cognome">Autore_cognome</label>
+            <input type="text" name="autore_cognome">
+             <label for="anni"> Anni</label>
+            <input type="text" name="anni">
+            <button type="submit"> Inserisci</button>
+            <input type="hidden" name="action" value="create">
+            
+        </form>
+
+
+        <form action="/Fumetti.php " method="GET">
+        <button type="submit"> Fammeli Vedere</button>
+        <input type="hidden" name="action" value="read">
+        </form>
+
+    </body>
+</html>

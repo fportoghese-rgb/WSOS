@@ -1,0 +1,46 @@
+<!--
+    Implementare uno script in PHP che consenta di gestire un database di film. 
+    Il database di film dovrebbe avere i seguenti campi:
+
+    Titolo
+    Anno
+    Paese
+    Regista
+
+    Le funzioni richieste sono:
+
+    - CreateFilm(): Permette di inserire un nuovo record nel database con le informazioni specificate.
+
+    - ReadAllFilms(): Restituisce tutti i film presenti nel database.
+
+    - UpdateFilm(): Aggiorna le informazioni di un film nel database in base al vecchio titolo.
+
+    - DeleteFilm(): Elimina un film dal database in base al titolo.
+
+-->
+
+<html>
+    <body>
+        <h2>CINEMA PLANET</h2>
+        <form action="provaFilms.php" method="POST"><br>
+            <label for="titolo">Titolo</label>
+            <input type="text" name="titolo">
+            <label for="anno">Anno</label>
+            <input type="text" name="anno">
+            <label for="paese">Paese</label>
+            <input type="text" name="paese">
+            <label for="regista">Regista</label>
+            <input type="text" name="regista">
+            <button type="submit ">Inserisci</button>
+            <input type="hidden" name="action" value="create">
+            <button type=" button" name="action" value="delete"> Elimina</button> <br>
+        </form>
+
+        <form action="provaFilms.php" method="GET" >
+         <button type="submit ">Mostra </button>
+            <input type="hidden" name="action" value="read">
+
+        </form>
+        
+    </body>
+</html>

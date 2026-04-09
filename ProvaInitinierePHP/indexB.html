@@ -1,0 +1,46 @@
+<!--
+
+Sviluppare uno o più script PHP e pagine HTML che implementino le funzionalità “CRUD” (Create, Read, Update, Delete) per una tabella books.
+
+1) Richieste (NB: sono R e C in CRUD)
+
+- Realizzare un form HTML con un bottone che, cliccato, richieda al server la lista dei record presenti nella tabella books e la visualizzi 
+  in una pagina HTML.
+
+- Realizzare un form HTML che permetta l’inserimento di un nuovo record nella tabella books, verificando che si vedano i nuovi inserimenti.
+
+2) Facoltative (NB: sono U e D in CRUD)
+
+- Nella lista dei record (come da punto 1), rendere l’attributo isbn di ogni record un link che, cliccato, porta a un form di aggiornamento 
+  per il record corrispondente.
+
+- Aggiungere, in quest’ultimo form di aggiornamento, un bottone per l’eliminazione del record dalla tabella books.
+
+    titolo,anno,paese,regista
+
+    08:18
+-->
+
+<html>
+  <body>
+    <h2> CINEMA PLANET</h2>
+    <form action="SimEsameBook.php" method="POST">
+      <label for="titolo">Titolo</label>
+      <input type="text" name="titolo">
+      <label for="anno">Anno</label>
+      <input type="text" name="anno">
+      <label for="paese">Paese</label>
+      <input type="text" name="paese">
+      <label for="regista">Regista</label>
+      <input type="text" name="regista">
+      <button type="submit">Inserisci</button>
+      <input type="hidden" name="action" value="create">
+      <button type="submit" name="action" value="delete">Elimina</button>
+    </form>
+
+    <form action="SimEsameBook.php" method="GET">
+      <button type="submit">Mostra</button>
+      <input type="hidden" name="action" value="read">
+    </form>
+  </body>
+</html>
